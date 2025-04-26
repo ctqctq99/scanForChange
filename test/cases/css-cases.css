@@ -1,0 +1,21 @@
+/* 规则 32: ::backdrop 伪元素 */
+.modal::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: inherit; /* 应该触发规则 32 (POSSIBLE) */
+  font-family: inherit; /* 应该触发规则 32 (POSSIBLE) */
+  --custom-property: value; /* 应该触发规则 32 (HIT) */
+}
+
+/* 规则 31: @container 查询 (已注释) */
+/*
+.container {
+  container-type: inline-size;
+}
+
+@container (min-width: 700px) {
+  .card {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+}
+*/ 

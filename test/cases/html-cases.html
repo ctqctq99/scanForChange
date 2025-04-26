@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HTML Test Cases</title>
+</head>
+<body>
+  <!-- 规则 33: block=render 属性 -->
+  <script block="render">
+    // 应该触发规则 33
+    console.log('This script has block=render attribute');
+  </script>
+
+  <!-- 规则 34: 内联脚本 -->
+  <script>
+    // 应该触发规则 34
+    document.write('<div>Hello World</div>');
+  </script>
+
+  <!-- 规则 35: 内联样式 -->
+  <style>
+    /* 应该触发规则 35 */
+    body {
+      background-color: #f0f0f0;
+    }
+  </style>
+
+  <!-- 规则 36: 内联事件处理器 -->
+  <button onclick="alert('Hello')">Click me</button> <!-- 应该触发规则 36 -->
+
+  <!-- 规则 37: 内联样式属性 -->
+  <div style="color: red;">Red text</div> <!-- 应该触发规则 37 -->
+
+  <!-- 规则 38: 内联脚本类型 -->
+  <script type="text/javascript">
+    // 应该触发规则 38
+    console.log('This script has type attribute');
+  </script>
+</body>
+</html> 
